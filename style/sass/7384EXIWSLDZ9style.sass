@@ -1,0 +1,496 @@
+// import stylesheet's
+@import "font"
+@import "mixin"
+@import "variables"
+@import "animation"
+
+
+    
+    
+//reset style
+body
+    position: relative
+body,html,h1,h2,h3,h4,h5,h6,p,span
+    margin: 0
+    padding: 0
+    font-family: 'Roboto'
+    font-size: 1rem
+    +box-sizing(border-box)
+    
+
+// logo
+.logo
+    position: absolute
+    z-index: 9
+    display: block
+    top: 0
+    left: 0
+    &:before
+        content: ""
+        border-top: 47px solid transparent
+        border-right: 22px solid $black
+        position: absolute
+        right: -21px
+        +transform(rotate(-182deg))
+// slider
+#slider
+    .slides
+        .caption
+            left: 0%
+            .h3
+                text-align: center
+                font-size: 3rem
+                font-family: 'Roboto-500'
+            .light
+                font-size: 1.5rem
+                text-align: center
+
+                
+// back to top button
+.back-to-top-hide
+    display: none !important
+.back-to-top
+    display: block
+    position: fixed
+    width: 44px
+    height: 44px
+    +border-radius(50%)
+    top: 50%
+    right: 2%
+    z-index: 222
+    background-color: lighten($black, 10%)
+    text-align: center
+    .mi-top
+        color: $white
+        padding-top: 12px
+        -webkit-font-smoothing: antialiased
+
+// side form
+.fill-side-form-active
+    right: 0px !important
+.fill-side-form
+    +box-shadow(0px 0px 8px -2px #333)
+    position: fixed
+    top: 0
+    right: -300px
+    z-index: 99
+    +transition(all .6s ease)
+    .fill-side-form-wrapper
+        width: 300px
+        background-color: $white
+        text-align: center
+        padding: 2rem 2rem
+        .side-btn
+            position: absolute
+            left: -50px
+            top: 0
+            cursor: pointer
+            width: 50px
+            height: 50px
+            text-align: center
+            display: inline-block
+            vertical-align: middle
+            background-color: #c11084
+            i
+                color: $white
+                line-height: 50px
+        .side-form-submit-btn
+            &:hover
+                color: $white
+                background: $pink_1 !important
+
+// love fashion style
+.lfs-bg
+    background-color: #f7eeee
+    background-image: url('../../img/course_ink.png')
+    background-repeat: no-repeat
+    background-size: inherit
+    background-position: top -326px right
+    background-attachment: fixed
+    z-index: -1
+.lfs
+    position: relative
+    .lfs-sec
+        h4.subtitle
+            font-family: 'Roboto-500'
+            font-size: 1.1rem
+            color: $black
+            margin-bottom: .6rem
+        h1
+            font-size: 2rem 
+            font-family: 'Roboto-500'
+            color: $light-gray
+            line-height: 2.6rem
+.lfs-bg
+    .fill-form-wrapper
+        position: relative
+        margin-bottom: 2.2rem
+        .fill-form
+            width: 300px
+            margin: 0 auto
+            text-align: left
+            color: $white
+            .fill-btn
+                position: relative
+            .fill-custom
+                height: 4rem
+                background-color: $pink_1
+                color: $white
+                cursor: pointer
+                +box-sizing(border-box)
+                .t1
+                    display: inline-block
+                    line-height: 4rem
+                    position: relative
+                    left: 1rem
+                    font-size: 1rem
+                .t2
+                    font-size: 1rem
+                    line-height: 4rem
+                    float: right
+                    width: 50px
+                    text-align: center
+                    display: inline-block
+                    vertical-align: middle
+                    background-color: #c11084
+                    .test-icon
+                        vertical-align: middle
+                        line-height: 4rem
+                        width: 100%
+
+            .form-text
+                text-align: center
+                color: $black
+                line-height: 1rem
+                margin: 1rem 0
+    .images-section
+        position: relative
+        .images-wrapper
+            +box-sizing(border-box)
+            display: block
+            text-align: center
+            width: 992px
+            position: relative
+            margin: 0 auto
+            .card-columns
+                column-count: 2
+                .card-image
+                    &:after
+                        top: -14px !important
+                        left: -14px !important
+                    &:before
+                        left: -62px !important
+                        top: 32px !important
+                .btl // box top left
+                    &:before,&:after
+                        border-top: 1px solid #ccc
+                        content: ""
+                        width: 20%
+                        position: absolute
+                        top: -10px
+                        left: 0
+                    &:before
+                        content: ""
+                        +transform(rotate(90deg))
+                        left: -49px
+                        top: 39px
+                .btr // box top right
+                    &:before,&:after
+                        border-top: 1px solid #ccc
+                        content: ""
+                        width: 20%
+                        position: absolute
+                        top: -10px
+                        right: 0
+                    &:before
+                        +transform(rotate(90deg))
+                        right: -49px
+                        top: 39px
+                .card
+                    +box-shadow(none)
+                    +border-radius(0px)
+                    background-color: unset
+                    border: 0px
+                    padding: 1.1rem
+                    position: relative
+                    .img-wrap
+                        position: relative
+                        overflow: hidden
+                        &:before
+                            content: ""
+                            position: absolute
+                            top: 0
+                            bottom: 0
+                            left: 0
+                            width: 20%
+                            z-index: 1
+                            background-color: $pink_1
+                            opacity: .5
+                        .img-text-box
+                            position: absolute
+                            right: 0
+                            bottom: 0
+                            z-index: 1
+                            background-color: $pink_1
+                            width: 120px
+                            height: 100px
+                            .words-wrap
+                                color: $white
+                                display: block
+                                font-size: 1.1em
+                                width: 100%
+                                position: absolute
+                                top: 50%
+                                left:  50%
+                                transform: translate(-50%, -50%)
+                                display: block
+                                width: 100%
+                                .w
+                                    text-transform: capitalize
+                                    letter-spacing: 2px
+                                    font-family: 'Roboto-500'
+                                                   
+                
+
+            
+
+
+// section - career
+.black-bg
+    background-color: $black
+.career-in-beauty
+    position: relative
+    padding: 4rem 0
+    .career-in-beauty-sec
+        color: $white
+        h1
+            font-size: 3rem
+            font-family: 'Roboto-700'
+            text-transform: uppercase
+            margin: 0 0 .6rem 0
+            letter-spacing: 4px
+        .subtitle
+            font-family: 'Roboto'
+            font-weight: 100
+            letter-spacing: 1px
+
+// tooltip icon animation
+.tia
+    +transform(rotate(45deg))
+    transition: all .5s ease
+// tooltip animation
+.ta
+    animation-name: slideRight
+    animation-duration: 1s
+    animation-iteration-count: 1
+    animation-fill-mode: both
+.wrapper
+    position: relative
+    height: 40px
+    margin-top: 2em
+    .i-circle
+        position: absolute
+        bottom: 0
+        left: 0
+    .circle
+        width: 40px
+        height: 40px
+        display: block
+        +border-radius(50%)
+        background-color: $pink_1
+        text-align: center
+        cursor: pointer
+        z-index: 1
+        .add
+            line-height: 40px
+            color: $white
+    .tooltip-wrapper
+        position: absolute
+        left: 0
+        +border-radius(4px)
+        padding: 4px 8px
+        line-height: 2em
+    .tooltip-right
+        background-color: $white
+        color: $black
+        font-size: $font-size - 1
+        &:before
+            content: ""
+            position: absolute
+            left: -15px
+            top: 50%
+            border-top: 15px solid transparent
+            border-right: 15px solid $white
+            border-bottom: 15px solid transparent
+            z-index: 9
+            +transform(translateY(-50%))
+#tooltip1
+    .modal-content
+        background-color: $white
+        border: 0
+        color: $black
+        h4
+            font-size: 1.6rem
+            margin-bottom: 8px
+            text-transform: uppercase
+            font-family: 'Roboto-700'
+        p
+            margin-bottom: 12px
+            
+    .modal-footer
+        background-color: $white
+        p
+            color: $black
+            text-align: left
+            width: 100%
+            padding-left: 1rem
+
+
+
+
+// section - subscribe 
+section,
+.subscribe
+    position: relative
+.subscribe-bg
+    background-color: $pink_1
+.subscribe-sec,
+.career-in-beauty-sec,
+.lfs-sec
+    font-family: 'Roboto-700'
+    padding: 4rem 0
+    position: relative
+    margin: 0 auto
+    width: 768px
+
+.subscribe
+    .subscribe-sec
+        h2
+            font-family: inherit
+            text-align: left
+            color: $white
+            font-size: 2.6em
+            letter-spacing: 2px
+        p
+            font-family: 'Roboto-500'
+            color: $white
+            line-height: 2em
+            font-size: 1.1rem
+        .subscribe-from
+            position: relative
+            margin-top: 2rem
+            .input
+                width: 100%
+                display: block
+                line-height: 2.6em
+                font-size: 1.1em
+                text-transform: capitalize
+                padding-left: 1rem
+                +box-sizing(border-box)
+            input[type="text"]
+                background-color: $white
+                border: 0px
+            .btn
+                width: 100%
+                height: 48px
+                line-height: 48px
+                display: block
+                border: 0
+                margin: 1rem 0 0 0
+                opacity: .4
+                cursor: pointer
+            .btn-subscribe
+                font-size: 1em
+                text-transform: uppercase
+            .btn-custom
+                color: $white
+                background-color: darken(purple, 30%)
+                +border-radius(unset)
+// footer
+footer
+    position: relative
+    +box-sizing(border-box)
+    .footer
+        height: 70px
+        text-align: center
+        h4
+            text-transform: capitalize
+            color: #484646
+            line-height: 70px
+            font-size: 1rem
+.footer-styled
+    background-color: darken(#333, 10%)
+
+
+
+// media query for tablet & mobile devices...
+@media only screen and(max-width: 992px)
+    .lfs
+        .lfs-bg
+            .images-section
+                .images-wrapper
+                    width: 768px
+                    .card-columns
+                        .card-image
+                            &:after
+                                top: -14px !important
+                                left: -14px !important
+                            &:before
+                                left: -50px !important
+                                top: 20px !important
+                        .btl // box top left
+                            &:before
+                                left: -39px
+                                top: 29px
+                        .btr
+                            &:before
+                                right: -37px
+                                top: 27px
+@media only screen and(max-width:787px)
+    .lfs
+        .lfs-bg
+            .lfs-sec
+                width: 568px
+                h1
+                    font-size: 1.8rem
+            .images-section
+                .images-wrapper
+                    width: 100%
+                    .card-columns
+                        column-count: 1
+                        .btr,.btl
+                            &:before,&:after
+                                border: 0px
+                        
+    .subscribe
+        .subscribe-sec
+            width: 568px
+            h2
+                margin: 0 0 0.6rem 0
+            p
+                font-size: $font-size - 1
+                line-height: 1rem
+    .career-in-beauty-sec
+        width: 568px
+        .subtitle
+            letter-spacing: 0
+    .career-in-beauty 
+        h1.title-big
+            font-size: 2rem
+.card-text
+    text-align: left
+    p
+        padding: 1.2rem 0 2rem 0
+
+@media only screen and(max-width:587px)
+    .lfs
+        .lfs-bg
+            .lfs-sec
+                width: 100%
+                h1
+                    font-size: 1.5rem
+    .subscribe
+        .subscribe-sec
+            width: 100%
+    .career-in-beauty-sec
+        width: 100%
